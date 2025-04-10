@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import Logo from "../img/boton.jpg";
+import Distribuidor from "../pages/distribuidor";
 
 const Contenido = () => {
     const [startTransition, setStartTransition] = useState(false);
@@ -101,24 +102,24 @@ const Contenido = () => {
             } h-full`}
         >
             {/* Sección con Scroll (60%) */}
-            <div className="w-3/5 ml-auto h-screen overflow-y-scroll p-6 space-y-20 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300">
-            <section id="proyectos" className="h-screen flex flex-col justify-center">
-                <h2 className="text-3xl font-bold">Proyectos</h2>
-                <p className="mt-4">Aquí van tus proyectos...</p>
-            </section>
+            <div className="ml-auto h-screen overflow-y-scroll space-y-20 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300">
+                <section id="proyectos" className="p-20">
+                    <h2 className="text-4xl font-bold mb-3">Proyectos</h2>
+                    <Distribuidor/>
+                </section>
 
-            <section id="sobre-mi" className="h-screen flex flex-col justify-center">
-                <h2 className="text-3xl font-bold">Sobre Mí</h2>
-                <p className="mt-4">ni yo se, que vas a estar sabiendo tu sobre mi, je je</p>
-            </section>
+                <section id="sobre-mi" className="p-20">
+                    <h2 className="text-4xl font-bold">Sobre Mí</h2>
+                    <p className="mt-4">ni yo se, que vas a estar sabiendo tu sobre mi, je je</p>
+                </section>
 
-            <section id="contacto" className="h-screen flex flex-col justify-center">
-                <h2 className="text-3xl font-bold mb-4">Contacto</h2>
-                <p><img src="https://img.freepik.com/vector-premium/icono-telefono_1076610-15197.jpg" alt="llamada" className="w-5 h-5" /><strong>9811175484</strong></p>
-                <p><strong>Correoyo@yomero</strong></p>
-                <p><strong></strong></p>
-                <p className="mt-4">Formulario o redes sociales...</p>
-            </section>
+                <section id="contacto" className="p-20">
+                    <h2 className="text-4xl font-bold mb-4">Contacto</h2>
+                    <p><img src="https://img.freepik.com/vector-premium/icono-telefono_1076610-15197.jpg" alt="llamada" className="w-5 h-5" /><strong>9811175484</strong></p>
+                    <p><strong>Correoyo@yomero</strong></p>
+                    <p><strong></strong></p>
+                    <p className="mt-4">Formulario o redes sociales...</p>
+                </section>
             </div>
         </div>
     </div>
