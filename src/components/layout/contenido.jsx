@@ -218,7 +218,7 @@ const Contenido = () => {
                             src={Logo}
                             onClick={() => accionar()}
                             alt="Logo"
-                            className="absolute inset-0 m-auto w-20 h-20 rounded-full"
+                            className="absolute inset-0 m-auto w-20 h-20 rounded-full z-50"
                             />
                         </button>
                     </div>
