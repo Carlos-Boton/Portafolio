@@ -303,9 +303,9 @@ const Contenido = () => {
                         <img src="https://i.blogs.es/d99c32/new_logo_gmail.svg/1366_2000.png" alt="Gmail" className="w-5 h-5"/>
                         <p><strong>carldfco@gmail.com</strong></p>
                     </div>
-                    <div className="mb-4 flex flex-row gap-x-4">
+                    <div className="mb-32 flex flex-row gap-x-4">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbqj9Ii13d6hx5a9kyLnC5A8A96LDSaSZv_w&s" alt="Github" className="w-5 h-5"/>
-                        <a href="https://github.com/Carlos-Boton?tab=repositories">Github</a>
+                        <a href="https://github.com/Carlos-Boton?tab=repositories"><strong>Github</strong></a>
                     </div>
                    
                 </section>
