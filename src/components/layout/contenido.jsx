@@ -209,7 +209,7 @@ const Contenido = () => {
                         <h1  className="text-2xl font-bold mb-2">Carlos Daniel Francisco Boton</h1>
                         <p className="text-lg mt-4"><strong>Desarrollador Web | Full Stack</strong></p>
                     </div>
-                    <div className={`relative w-24 h-24 transition-all duration-1000 ease-in-out ${ vistaModal ? "-mb-32 mt-10" : "mt-20"}`}>
+                    <div className={`relative w-24 h-24 transition-all duration-1000 ease-in-out ${ startTransition ? `${ vistaModal ? "-mb-32 mt-10" : "mt-20"}` : "" }`}>
                         <div className={`w-full h-full border-4 border-gray-600 border-t-transparent rounded-full ${
                         startTransition ? "opacity-0" : "animate-spin"
                         } transition-all duration-1000 ease-in-out`}></div>
