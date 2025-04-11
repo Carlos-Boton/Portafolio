@@ -84,8 +84,8 @@ const Contenido = () => {
             <div className={`transition-all duration-1000 ease-in-out flex flex-col items-center justify-center ${
                 twoTransition ? "opacity-100 h-[30%]" : "opacity-0 h-0"
             } w-full`}>
-                <h1  className="text-2xl font-bold mb-2">Carlos Daniel Francisco Boton</h1>
-                <p className="text-lg mt-4">Desarrollador Web | Full Stack</p>
+                <h1  className="text-4xl font-bold mb-2">Carlos Daniel Francisco Boton</h1>
+                <p className="text-lg mt-4"><strong>Desarrollador Web | Full Stack</strong></p>
                 <nav className="mt-6 space-y-4">
                     <a href="#proyectos" className={`block font-bold flex items-center ${activeSection === "proyectos" ? "text-gray-800" : "text-white"}`}>
                         {activeSection === "proyectos" && "➡"} Proyectos
