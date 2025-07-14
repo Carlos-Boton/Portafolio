@@ -13,7 +13,7 @@ const Sidebar = () => {
                 <div className="flex justify-center">
                     <img src={imgAzul} alt="" className="w-28 mb-2"/>
                 </div>
-                <h3 className="text-blue-600 font-bold mb-8 text-xl">Carlos Daniel Francisco Botón</h3>
+                <h3 className="text-blue-600 font-bold mb-8 text-xl text-center">Carlos Daniel Francisco Botón</h3>
                 <nav className="relative ">
                     <ul className="text-white py-4 flex flex-col items-center">
                         <Link to="/proyectos" onClick={() =>  setActiveSidebar("portafolio")} className={`p-3 cursor-pointer transition-all duration-500 ${activeSidebar === "portafolio" && ('text-blue-600 font-bold')}`}>Portafolio</Link>

@@ -31,7 +31,7 @@ const Interfaz = () => {
     }
 
     return (
-        <div className="bg-slate-950 flex">
+        <div className="bg-slate-950 flex min-w-[950px]">
             <Sidebar/>
             <div className="flex-1 h-screen">{Content}</div>
         </div>

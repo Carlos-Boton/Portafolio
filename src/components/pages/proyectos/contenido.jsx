@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./navbar";
+import Diseño from "./pages/diseño";
 import Distribuidor from "./pages/distribuidor";
 
 const Contenido = ({imgWhatsapp,IconsPoryectos}) => {
@@ -30,10 +31,10 @@ const Contenido = ({imgWhatsapp,IconsPoryectos}) => {
         <>
             <Navbar linkNav={linkNav} setLinkNav={setLinkNav} />
             {linkNav === "1" ? (
-                <Distribuidor imgWhatsapp={imgWhatsapp} IconsPoryectos={IconsPoryectos} toggleCheveron={toggleCheveron} valorImg={valorImg} ArrayTextWhatsapp={ArrayTextWhatsapp} ArrayImg={ArrayImg} />
+                <Diseño imgWhatsapp={imgWhatsapp} IconsPoryectos={IconsPoryectos} toggleCheveron={toggleCheveron} valorImg={valorImg} ArrayTextWhatsapp={ArrayTextWhatsapp} ArrayImg={ArrayImg} />
             )
             : linkNav === "2" ? (
-                <></>
+                <Distribuidor/>
             )
             : (
                 <></>
