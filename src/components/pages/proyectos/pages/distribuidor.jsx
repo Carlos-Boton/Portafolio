@@ -1,7 +1,22 @@
 
-const Distribuidor = ({imgWhatsapp,IconsPoryectos,toggleCheveron,valorImg}) => {
+const Distribuidor = ({IconsPoryectos,toggleCheveron,valorImg,ArrayTextWhatsapp,ArrayImg}) => {
 
     const [Icon1,Icon2] = IconsPoryectos;
+
+    const imagenes = ArrayTextWhatsapp[valorImg].img || [];
+    const total = imagenes.length;
+    const visibles = imagenes.slice(0, 4);
+
+    const getImageClass = (index) => {
+        if (total === 1) return "col-span-2 row-span-2 w-full px-20 flex items-center";
+        if (total === 2) return "col-span-2 h-[200px] w-[24rem]";
+        if (total === 3) {
+            if (index === 0 || index === 1) return "col-span-1 h-[170px]"; // dos arriba
+            if (index === 2) return "col-span-2 h-[170px] w"; // uno abajo
+        }
+            
+        return "col-span-1 h-[200px] w-[30vh]"; // para 4 o más
+    };
 
     return(
         <div className=" h-[calc(100vh-4rem)] w-full overflow-y-auto">
@@ -10,7 +25,6 @@ const Distribuidor = ({imgWhatsapp,IconsPoryectos,toggleCheveron,valorImg}) => {
                     <p className="drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] w-[400px]"><strong>Este proyecto busca resolver un objetivo personal:</strong> mejorar mi comprensión y habilidades en diseño de interfaces web modernas, inspirándome en el diseño de WhatsApp. El enfoque está en replicar la estructura, distribución visual y estilo responsivo del frontend</p>
                 </div>
                 <div className="px-4 pb-4 text-justify mb-4">
-                    <h3 className="text-xl font-bold">Documentacion</h3>
                     <p>Clon visual de WhatsApp Web – Proyecto de práctica
                     Aplicación de frontend enfocada 100% en la reproducción visual de WhatsApp Web.
                     No incluye funcionalidad real de chat, pero reproduce la estructura, estética, y lógica visual de una app de mensajería.
@@ -18,11 +32,24 @@ const Distribuidor = ({imgWhatsapp,IconsPoryectos,toggleCheveron,valorImg}) => {
                 </div>
                 <h3 className="text-xl font-bold text-center mb-2">¿Que funcionalidades Tiene?</h3>
                 <div className="flex-col justify-center h-[32rem] mb-4">
-                    <h4 className="text-center">*Interfaz responsiva tipo WhatsApp (lista de chats, ventana de conversación)*</h4>
+                    <h4 className="text-center">{ArrayTextWhatsapp[valorImg].funcion}</h4>
                     <div className="h-[28rem] relative flex justify-center p-4">
-                        <div className="absolute h-full w-14 left-10 flex" ><Icon1 onClick={() => toggleCheveron(1)}  className="w-8" strokeWidth={2}/></div>
-                        <div className="absolute h-full w-14 right-10 flex" ><Icon2 onClick={() => toggleCheveron(0)} className="w-8" strokeWidth={2}/></div>
-                        <img src={imgWhatsapp[valorImg]} alt="" className="h-full object-contain"/>
+                        {!(valorImg === 0) && (
+                            <div className="absolute z-20 h-full w-14 left-10 flex items-center" ><Icon1 onClick={() => toggleCheveron(1)}  className="w-12 h-12 hover:bg-blue-950 rounded-full p-1" strokeWidth={2}/></div>
+                        )}
+                        {!(valorImg === ArrayImg-1) && (
+                            <div className="absolute z-20 h-full w-14 right-10 flex items-center" ><Icon2 onClick={() => toggleCheveron(0)} className="w-12 h-12 hover:bg-blue-950 rounded-full p-1" strokeWidth={2}/></div>
+                        )}
+                        
+                            <div className="grid grid-cols-2 gap-2">
+                                {visibles.map((vistaImg, i) => (
+                                    <div key={i}
+                                    className={`relative overflow-hidden rounded-md ${getImageClass(i)}`}
+                                    >
+                                        <img src={vistaImg} alt="" className="w-full object-contain"/>     
+                                    </div>
+                                ))}
+                            </div>
                     </div>
                     <div className="text-center">
                         <a href="https://portafolio-whats.vercel.app/proyectos" target="_blank" rel="noopener noreferrer" className="text-blue-500 font-bold">Link de Diseño de WhatsApp</a>
