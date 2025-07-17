@@ -22,9 +22,12 @@ const Inicio = ({ImgAzul}) => {
                         </h1>
                         <img src={ImgAzul} alt="" className="w-0 md:w-40 lg:w-56" />
                     </div>
-                    <p className="mt-8 text-pretty text-lg font-medium text-slate-400 sm:text-xl/8">
-                    Ingeniero Informatico || Desarrollador Full Stack
-                    </p>
+                    <img src={ImgAzul} alt="" className="w-32 mt-4 md:hidden" />
+                    <div className="flex mt-8 text-pretty text-lg font-medium text-slate-400 sm:text-xl/8">
+                        <h3 className="border-r-2 border-r-slate-400 mr-1 px-2 text-right">Ingeniero Informatico</h3>
+                        <h3 className="border-l-2 border-l-slate-400 mr-1 px-2">Desarrollador Full Stack</h3>
+                    </div>
+
                 </div>
                 <div
                     aria-hidden="true"
