@@ -1,5 +1,6 @@
 import { PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon } from "@heroicons/react/16/solid";
 import { useState,useEffect } from "react";
+import ImgAzul from "../img/azul.webp";
 import Contacto from "../pages/contacto";
 import Inicio from "../pages/inicio";
 import Proyectos from "../pages/proyectos";
@@ -13,13 +14,13 @@ const Cuerpo = () => {
 
      useEffect(() => {
         const sections = document.querySelectorAll("section");
-        console.log("Secciones encontradas:", sections);
+        // console.log("Secciones encontradas:", sections);
         const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-            console.log("Observando:", entry.target.id, "Visibilidad:", entry.isIntersecting);
+            // console.log("Observando:", entry.target.id, "Visibilidad:", entry.isIntersecting);
             if (entry.isIntersecting) {
-                console.log("Sección activa:", entry.target.id);
+                // console.log("Sección activa:", entry.target.id);
                 setNavegante(entry.target.id);
             }
             });
@@ -32,7 +33,7 @@ const Cuerpo = () => {
         return () => {
         sections.forEach((section) => observer.unobserve(section));
         };
-    }, []);
+    }, [navegante]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -55,8 +56,8 @@ const Cuerpo = () => {
 
     return(
         <div id="main" className="min-h-screen transition-colors duration-700 bg-slate-800">
-            <Navbar navegante={navegante} setNavegante={setNavegante} />
-            <Inicio/>
+            <Navbar navegante={navegante} setNavegante={setNavegante}/>
+            <Inicio ImgAzul={ImgAzul} />
             <Proyectos/>
             <Sobremi/>
             <Contacto iconsContacto={iconsContacto} />

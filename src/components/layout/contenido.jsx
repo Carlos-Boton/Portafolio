@@ -38,13 +38,13 @@ const Contenido = () => {
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
-        console.log("Secciones encontradas:", sections);
+        // console.log("Secciones encontradas:", sections);
         const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
-            console.log("Observando:", entry.target.id, "Visibilidad:", entry.isIntersecting);
+            // console.log("Observando:", entry.target.id, "Visibilidad:", entry.isIntersecting);
             if (entry.isIntersecting) {
-                console.log("Sección activa:", entry.target.id);
+                // console.log("Sección activa:", entry.target.id);
                 setActiveSection(entry.target.id);
             }
             });
