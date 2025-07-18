@@ -60,7 +60,7 @@ const Cuerpo = () => {
             <Inicio ImgAzul={ImgAzul} />
             <Proyectos/>
             <Sobremi/>
-            <Contacto iconsContacto={iconsContacto} />
+            <Contacto iconsContacto={iconsContacto} ImgAzul={ImgAzul} />
         </div>
     )
 }
