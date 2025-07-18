@@ -16,23 +16,23 @@ const Proyectos = () => {
                     />
                 </div>
                 <div className="h-full flex flex-col items-center justify-center">
-                    <h3 className="text-7xl font-bold text-slate-400 mb-10">Proyectos</h3>
-                    <div className=" h-[600px] py-4 px-12 w-full overflow-x-auto">
+                    <h3 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl max-w-xl mb-10">Proyectos</h3>
+                    <div className="h-[540px] sm:h-[600px] py-6 sm:px-12 w-full overflow-x-auto">
                         <div className="flex items-center justify-center h-full min-w-max">
 
                             <div className="w-80 h-full rounded-2xl mx-6 bg-slate-700 shadow-lg overflow-hidden text-white">
-                                <div className="h-[360px] bg-gray-200">
+                                <div className="h-[300px] sm:h-[360px] bg-gray-200">
                                     <img
                                         src="https://via.placeholder.com/320x160"
                                         alt="IMG"
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
-                                <div className="p-4 flex flex-col justify-between h-[calc(100%-360px)]">
+                                <div className="p-4 flex flex-col justify-between h-[calc(100%-304px)] sm:h-[calc(100%-360px)]">
                                     <div>
                                         <h2 className="text-xl font-bold mb-2 text-white">Prueba de tarjeta</h2>
                                         <p className="text-sm text-white">
-                                            Bla, Bla, Bla
+                                            hola como estamos a todos, este es una prueba de texto larga para diferenciarlo entre tamaño de dispositivos, bla bla bla
                                         </p>
                                     </div>
                                     <button className="mt-4 bg-slate-500 text-white text-sm px-4 py-2 rounded hover:bg-slate-600 transition-all">
