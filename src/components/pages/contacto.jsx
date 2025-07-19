@@ -106,13 +106,13 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
 
                 <div className=" w-full">
                     <div className="flex items-center justify-center w-full space-x-6">
-                        <div className="group relative w-14 h-14 z-10">
-                            <div className="absolute bg-slate-400 h-full w-full rounded-full z-20 p-2">
-                                <Icono1 className="w-10 h-10" />
+                        <div className="group relative w-16 h-16 z-10">
+                            <div className="absolute bg-slate-600 h-full w-full rounded-full z-20 p-2">
+                                <Icono1 className="w-12 h-12" />
                             </div>
-                            <div className="absolute transition-all w-14 h-14 bottom-0 group-hover:-bottom-[70px]">
+                            <div className="absolute transition-all w-14 h-14 bottom-1 left-1 group-hover:-bottom-[70px]">
                                 <div className="relative h-full w-full">
-                                    <div className="absolute transition-all left-0 group-hover:-left-[70px] h-full w-full bg-slate-500 rounded-full group-hover:w-[200px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
+                                    <div className="absolute transition-all border-2 left-0 group-hover:-left-[70px] h-full w-full bg-slate-800 rounded-full group-hover:w-[200px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
                                         <h3 className="opacity-0 scale-95 transition-all duration-300 text-xl text-center
                                         group-hover:opacity-100 group-hover:scale-100 group-hover:delay-[350ms] delay-0 whitespace-nowrap">+52 981 177 15 71</h3>
                                     </div>
@@ -120,13 +120,13 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
                             </div>
                         </div>
 
-                        <div className="group relative w-14 h-14 z-10">
-                            <div className="absolute bg-slate-400 h-full w-full rounded-full z-20 p-2">
-                                <Icono2 className="w-10 h-10" />
+                        <div className="group relative w-16 h-16 z-10">
+                            <div className="absolute bg-slate-600 h-full w-full rounded-full z-20 p-2">
+                                <Icono2 className="w-12 h-12" />
                             </div>
-                            <div className="absolute transition-all w-14 h-14 bottom-0 group-hover:-bottom-[70px]">
+                            <div className="absolute transition-all w-14 h-14 bottom-1 left-1 group-hover:-bottom-[70px]">
                                 <div className="relative h-full w-full">
-                                    <div className="absolute transition-all left-0 group-hover:-left-[80px] h-full w-full bg-slate-500 rounded-full group-hover:w-[220px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
+                                    <div className="absolute transition-all border-2 left-0 group-hover:-left-[80px] h-full w-full bg-slate-800 rounded-full group-hover:w-[220px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
                                         <h3 className="opacity-0 scale-95 transition-all duration-300 text-xl text-center
                                         group-hover:opacity-100 group-hover:scale-100 group-hover:delay-[350ms] delay-0 whitespace-nowrap">Campeche, campeche</h3>
                                     </div>
@@ -134,13 +134,13 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
                             </div>
                         </div>
 
-                        <div className="group relative w-14 h-14 z-10">
-                            <div className="absolute bg-slate-400 h-full w-full rounded-full z-20 p-2">
-                                <Icono3 className="w-10 h-10" />
+                        <div className="group relative w-16 h-16 z-10">
+                            <div className="absolute bg-slate-600 h-full w-full rounded-full z-20 p-2">
+                                <Icono3 className="w-12 h-12" />
                             </div>
-                            <div className="absolute transition-all w-14 h-14 bottom-0 group-hover:-bottom-[70px]">
+                            <div className="absolute transition-all w-14 h-14 bottom-1 left-1 group-hover:-bottom-[70px]">
                                 <div className="relative h-full w-full">
-                                    <div className="absolute transition-all left-0 group-hover:-left-[75px] h-full w-full bg-slate-500 rounded-full group-hover:w-[210px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
+                                    <div className="absolute transition-all border-2 left-0 group-hover:-left-[75px] h-full w-full bg-slate-800 rounded-full group-hover:w-[210px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
                                         <h3 className="opacity-0 scale-95 transition-all duration-300 text-xl text-center
                                         group-hover:opacity-100 group-hover:scale-100 group-hover:delay-[350ms] delay-0 whitespace-nowrap">carldfco@gmail.com</h3>
                                     </div>
@@ -148,13 +148,13 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
                             </div>
                         </div>
 
-                        <div className="group relative w-14 h-14 z-10">
-                            <div className="absolute bg-slate-400 h-full w-full rounded-full z-20 p-2">
-                                <Icono4 className="w-10 h-10" />
+                        <div className="group relative w-16 h-16 z-10">
+                            <div className="absolute bg-slate-600 h-full w-full rounded-full z-20 p-2">
+                                <Icono4 className="w-12 h-12" />
                             </div>
-                            <div className="absolute transition-all w-14 h-14 bottom-0 group-hover:-bottom-[70px]">
+                            <div className="absolute transition-all w-14 h-14 bottom-1 left-1 group-hover:-bottom-[70px]">
                                 <div className="relative h-full w-full">
-                                    <div className="absolute transition-all left-0 group-hover:-left-[20px] h-full w-full bg-slate-500 rounded-full group-hover:w-[100px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
+                                    <div className="absolute transition-all border-2 left-0 group-hover:-left-[20px] h-full w-full bg-slate-800 rounded-full group-hover:w-[100px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
                                         <h3 className="opacity-0 scale-95 transition-all duration-300 text-xl text-center
                                         group-hover:opacity-100 group-hover:scale-100 group-hover:delay-[350ms] delay-0 whitespace-nowrap">Github</h3>
                                     </div>
