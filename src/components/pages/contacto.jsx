@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import emailjs from "emailjs-com";
 
-const Contacto = ({ iconsContacto, ImgAzul }) => {
+const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
 
     const form = useRef();
 
@@ -37,7 +37,7 @@ const Contacto = ({ iconsContacto, ImgAzul }) => {
                 <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                     <img
                         alt="Your Company"
-                        src={ImgAzul}
+                        src={iconosImagenes[logoSeleccionado]}
                         className="mx-auto h-20 w-auto"
                     />
                     <h2 className="mt-2 text-center text-2xl/9 font-bold tracking-tight">

@@ -1,4 +1,4 @@
-const Inicio = ({ImgAzul}) => {
+const Inicio = ({iconosImagenes,logoSeleccionado,setLogoSeleccionado}) => {
 
     return (
         <div className="h-screen">
@@ -16,18 +16,26 @@ const Inicio = ({ImgAzul}) => {
                     />
                 </div>
                 <div className="h-full flex flex-col items-center justify-center">
-                    <div className="flex items-center -mt-32 text-center">
+                    <div className="flex items-center -mt-16 text-center">
                         <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl max-w-xl">
                             Carlos Daniel Francisco Botón
                         </h1>
-                        <img src={ImgAzul} alt="" className="w-0 md:w-40 lg:w-56" />
+                        <img src={iconosImagenes[logoSeleccionado]} alt="" className="w-0 md:w-40 lg:w-56" />
                     </div>
-                    <img src={ImgAzul} alt="" className="w-32 mt-4 md:hidden" />
+                    <img src={iconosImagenes[logoSeleccionado]} alt="" className="w-32 mt-4 md:hidden" />
                     <div className="flex mt-8 text-pretty text-lg font-medium text-slate-400 sm:text-xl/8">
                         <h3 className="border-r-2 border-r-slate-400 mr-1 px-2 text-right">Ingeniero Informatico</h3>
                         <h3 className="border-l-2 border-l-slate-400 mr-1 px-2">Desarrollador Full Stack</h3>
                     </div>
-
+                    <div className="w-full h-16 mt-10 flex space-x-4 justify-center">
+                        {iconosImagenes.map((logo, i) => (
+                            i !== logoSeleccionado && (
+                                <div key={i}>
+                                    <img onClick={() => setLogoSeleccionado(i)} src={logo} alt="" className="w-16 h-16" />
+                                </div>
+                            )
+                        ))}
+                    </div>
                 </div>
                 <div
                     aria-hidden="true"

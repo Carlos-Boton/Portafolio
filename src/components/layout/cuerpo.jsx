@@ -1,6 +1,10 @@
 import { PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon } from "@heroicons/react/16/solid";
 import { useState,useEffect } from "react";
 import ImgAzul from "../img/azul.webp";
+import ImgAnaranjado from "../img/anaranjado.webp";
+import ImgMorado from "../img/morado.webp";
+import ImgRojo from "../img/rojo.webp";
+import ImgVerde from "../img/verde.webp";
 import Contacto from "../pages/contacto";
 import Inicio from "../pages/inicio";
 import Proyectos from "../pages/proyectos";
@@ -10,7 +14,9 @@ import Navbar from "./navbar";
 const Cuerpo = () => {
 
     const [navegante,setNavegante] = useState("inicio");
+    const [logoSeleccionado, setLogoSeleccionado] = useState(0);
     const iconsContacto = [PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon];
+    const iconosImagenes = [ImgAzul,ImgAnaranjado,ImgMorado,ImgRojo,ImgVerde];
 
      useEffect(() => {
         const sections = document.querySelectorAll("section");
@@ -57,10 +63,10 @@ const Cuerpo = () => {
     return(
         <div id="main" className="min-h-screen transition-colors duration-700 bg-slate-800">
             <Navbar navegante={navegante} setNavegante={setNavegante}/>
-            <Inicio ImgAzul={ImgAzul} />
+            <Inicio iconosImagenes={iconosImagenes} setLogoSeleccionado={setLogoSeleccionado} logoSeleccionado={logoSeleccionado} />
             <Proyectos/>
             <Sobremi/>
-            <Contacto iconsContacto={iconsContacto} ImgAzul={ImgAzul} />
+            <Contacto iconsContacto={iconsContacto} iconosImagenes={iconosImagenes} logoSeleccionado={logoSeleccionado} />
         </div>
     )
 }
