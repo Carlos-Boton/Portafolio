@@ -49,9 +49,9 @@ const Cuerpo = () => {
 
         if (scrollTop >= scrollHeight - 500) {
             main.classList.remove("bg-slate-800");
-            main.classList.add("bg-slate-950");
+            main.classList.add("bg-slate-900");
         } else {
-            main.classList.remove("bg-slate-950");
+            main.classList.remove("bg-slate-900");
             main.classList.add("bg-slate-800");
         }
         };
