@@ -1,6 +1,6 @@
 const ModalProyectos = ({mostrarModal,setMostrarModal,proyectos,valorModal,XMarkIcon,ChevronLeftIcon,ChevronRightIcon,toggleImagenModal,valorImagenModal}) => {
     return(
-        <div className={`fixed h-screen bg-slate-900 overflow-hidden right-0 z-50 transition-all duration-200 ${mostrarModal ? 'group w-full sm:w-[600px]' : 'w-0'}`}>
+        <div className={`fixed h-screen bg-slate-900 overflow-hidden right-0 z-50 transition-all duration-200 ${mostrarModal ? 'group w-full md:w-[800px]' : 'w-0'}`}>
             <div className="w-full h-12">
                 <div
                 onClick={() => setMostrarModal(false)}
@@ -12,8 +12,8 @@ const ModalProyectos = ({mostrarModal,setMostrarModal,proyectos,valorModal,XMark
                 <div className="w-full h-[4rem] whitespace-nowrap">
                     <h3 className="text-center text-4xl font-bold text-white">{proyectos[valorModal].nombre}</h3>
                 </div>
-                <div className="h-[calc(100vh-15rem)] w-full px-8 text-justify">
-                    <div className="h-[30rem] relative flex items-center justify-center mb-8">
+                <div className="h-[calc(100vh-15rem)] overflow-y-auto w-full px-8 text-justify py-8">
+                    <div className="h-[20rem] sm:h-[30rem] relative flex items-center justify-center mb-8">
                         <div className="absolute h-full w-12 left-0 flex items-center" >
                             <div
                             onClick={() => toggleImagenModal(0)}

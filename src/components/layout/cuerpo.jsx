@@ -21,16 +21,26 @@ import React from "../img/icons/react.svg";
 import ReactRouter from "../img/icons/reactrouter.svg";
 import Tailwind from "../img/icons/tailwindcss.svg";
 import Vite from "../img/icons/vite.svg";
-import Whats1 from "../img/whatsapp/1.webp";
-import Whats2 from "../img/whatsapp/2.webp";
-import Whats3 from "../img/whatsapp/3.webp";
-import Whats4 from "../img/whatsapp/4.webp";
-import Whats5 from "../img/whatsapp/5.webp";
-import Whats6 from "../img/whatsapp/6.webp";
-import Whats7 from "../img/whatsapp/7.webp";
-import Whats8 from "../img/whatsapp/8.webp";
-import Whats9 from "../img/whatsapp/9.webp";
-// import Whats10 from "../img/whatsapp/10.webp";
+import Whats1 from "../img/whatsapp/ajustes.webp";
+import Whats2 from "../img/whatsapp/chatContacto.webp";
+import Whats3 from "../img/whatsapp/chatContactoChat.webp";
+import Whats4 from "../img/whatsapp/chatContactoChatInformacion.webp";
+import Whats5 from "../img/whatsapp/chatContactoImg.webp";
+import Whats6 from "../img/whatsapp/estado.webp";
+import Whats7 from "../img/whatsapp/estadoImg.webp";
+import Whats8 from "../img/whatsapp/perfil.webp";
+import Dist1 from "../img/distribuidor/clientes.webp";
+import Dist2 from "../img/distribuidor/descargaPdf.webp";
+import Dist3 from "../img/distribuidor/generarPedidos.webp";
+import Dist4 from "../img/distribuidor/generarPedidosMensaje.webp";
+import Dist5 from "../img/distribuidor/inicioSesion.webp";
+import Dist6 from "../img/distribuidor/navApp.webp";
+import Dist7 from "../img/distribuidor/productos.webp";
+import Dist8 from "../img/distribuidor/ticketPedido.webp";
+import Dist9 from "../img/distribuidor/ventasSemana.webp";
+import Dist10 from "../img/distribuidor/viajePedidoResumen.webp";
+import Dist11 from "../img/distribuidor/viajePedidos.webp";
+
 import ModalProyectos from "../pages/modalProyectos";
 
 const Cuerpo = () => {
@@ -43,9 +53,10 @@ const Cuerpo = () => {
     const iconsContacto = [PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon];
     const iconosImagenes = [ImgAzul,ImgAnaranjado,ImgMorado,ImgRojo,ImgVerde];
     const proyectos = [
-        {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"",lik:""},
-        {nombre: "Gestion de ventas", iconos: [Firebase,React,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats3,Whats4,Whats5,Whats6],descripcion:"El objetivo es diseñar y desarrollar una aplicación web para gestionar la generación y organización de pedidos de manera eficiente, permitiendo agruparlos en viajes según la capacidad de entrega, registrar ventas locales independientes e impresion de ticket, con el fin de optimizar el trabajo diario de un distribuidor y mejorar la administración de sus operaciones.",github:"",lik:""},
-        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [Whats7,Whats8,Whats9],descripcion:"",github:"",lik:""}
+        // {nombre:"", iconos: [], imagen: [],},
+        {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2,Whats3,Whats4,Whats5,Whats6,Whats7,Whats8], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"",lik:""},
+        {nombre: "Gestion de ventas", iconos: [Firebase,React,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Dist1,Dist2,Dist3,Dist4,Dist5,Dist6,Dist7,Dist8,Dist9,Dist10,Dist11],descripcion:"El objetivo es diseñar y desarrollar una aplicación web para gestionar la generación y organización de pedidos de manera eficiente, permitiendo agruparlos en viajes según la capacidad de entrega, registrar ventas locales independientes e impresion de ticket, con el fin de optimizar el trabajo diario de un distribuidor y mejorar la administración de sus operaciones.",github:"",lik:""},
+        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [],descripcion:"",github:"",lik:""}
     ]
     const valorProyecto = proyectos[valorModal].imagen.length - 1;
 
