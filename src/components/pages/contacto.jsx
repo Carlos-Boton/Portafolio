@@ -157,7 +157,7 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
                                     <div className="absolute transition-all border-2 left-0 group-hover:-left-[20px] h-full w-full bg-slate-800 rounded-full group-hover:w-[100px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
                                         <h3 className="opacity-0 scale-95 transition-all duration-300 text-xl text-center
                                         group-hover:opacity-100 group-hover:scale-100 group-hover:delay-[350ms] delay-0 whitespace-nowrap">
-                                            <a href="https://github.com/Carlos-Boton?tab=repositories">Github</a>
+                                            <a href="https://github.com/Carlos-Boton?tab=repositories" target="_blank" rel="noopener noreferrer">Github</a>
                                         </h3>
                                     </div>
                                 </div>

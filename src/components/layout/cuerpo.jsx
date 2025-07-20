@@ -76,23 +76,32 @@ const Cuerpo = () => {
     }, [navegante]);
 
     useEffect(() => {
-        const handleScroll = () => {
         const main = document.getElementById("main");
-        const scrollTop = window.scrollY;
-        const scrollHeight = document.body.scrollHeight - window.innerHeight;
 
-        if (scrollTop >= scrollHeight - 500) {
-            main.classList.remove("bg-slate-800");
-            main.classList.add("bg-slate-900");
-        } else {
-            main.classList.remove("bg-slate-900");
-            main.classList.add("bg-slate-800");
-        }
+        const handleScroll = () => {
+            const scrollTop = main.scrollTop;
+            const scrollHeight = main.scrollHeight - main.clientHeight;
+
+            if (scrollTop >= scrollHeight - 500) {
+                main.classList.remove("bg-slate-800");
+                main.classList.add("bg-slate-900");
+            } else {
+                main.classList.remove("bg-slate-900");
+                main.classList.add("bg-slate-800");
+            }
         };
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        if (main) {
+            main.addEventListener("scroll", handleScroll);
+        }
+
+        return () => {
+            if (main) {
+            main.removeEventListener("scroll", handleScroll);
+            }
+        };
     }, []);
+
 
     return(
         <div id="main" className="h-screen overflow-y-auto transition-colors duration-700 bg-slate-800">
