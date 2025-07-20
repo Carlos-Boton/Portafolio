@@ -1,4 +1,4 @@
-import { PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon,XMarkIcon } from "@heroicons/react/16/solid";
+import { PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon,XMarkIcon,ChevronLeftIcon,ChevronRightIcon } from "@heroicons/react/16/solid";
 import { useState,useEffect } from "react";
 import ImgAzul from "../img/azul.webp";
 import ImgAnaranjado from "../img/anaranjado.webp";
@@ -38,18 +38,32 @@ const Cuerpo = () => {
     const [navegante,setNavegante] = useState("inicio");
     const [mostrarModal, setMostrarModal] = useState(false);
     const [valorModal, setValorModal] = useState(0)
+    const [valorImagenModal, setValorImagenModal] = useState(0)
     const [logoSeleccionado, setLogoSeleccionado] = useState(0);
     const iconsContacto = [PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon];
     const iconosImagenes = [ImgAzul,ImgAnaranjado,ImgMorado,ImgRojo,ImgVerde];
     const proyectos = [
-        {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2] },
-        {nombre: "Gestion de ventas", iconos: [Firebase,React,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats3,Whats4,Whats5,Whats6]},
-        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [Whats7,Whats8,Whats9]}
+        {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"",lik:""},
+        {nombre: "Gestion de ventas", iconos: [Firebase,React,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats3,Whats4,Whats5,Whats6],descripcion:"El objetivo es diseñar y desarrollar una aplicación web para gestionar la generación y organización de pedidos de manera eficiente, permitiendo agruparlos en viajes según la capacidad de entrega, registrar ventas locales independientes e impresion de ticket, con el fin de optimizar el trabajo diario de un distribuidor y mejorar la administración de sus operaciones.",github:"",lik:""},
+        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [Whats7,Whats8,Whats9],descripcion:"",github:"",lik:""}
     ]
+    const valorProyecto = proyectos[valorModal].imagen.length - 1;
 
     const toggleModal = (i) => {
         setMostrarModal(true);
         setValorModal(i);
+        setValorImagenModal(0);
+    }
+
+    const toggleImagenModal = (i) => {
+        if(i === 0){
+            if(valorImagenModal === 0) return;
+            setValorImagenModal(valorImagenModal - 1)
+        }
+        if(i === 1){
+            if(valorImagenModal === valorProyecto) return;
+            setValorImagenModal(valorImagenModal + 1)
+        }
     }
 
      useEffect(() => {
@@ -106,7 +120,7 @@ const Cuerpo = () => {
     return(
         <div id="main" className="h-screen overflow-y-auto transition-colors duration-700 bg-slate-800">
             <Navbar navegante={navegante} setNavegante={setNavegante}/>
-            <ModalProyectos mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} proyectos={proyectos} valorModal={valorModal} XMarkIcon={XMarkIcon} />
+            <ModalProyectos mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} proyectos={proyectos} valorModal={valorModal} XMarkIcon={XMarkIcon} ChevronLeftIcon={ChevronLeftIcon} ChevronRightIcon={ChevronRightIcon} toggleImagenModal={toggleImagenModal} valorImagenModal={valorImagenModal} />
             <Inicio iconosImagenes={iconosImagenes} setLogoSeleccionado={setLogoSeleccionado} logoSeleccionado={logoSeleccionado} />
             <Proyectos proyectos={proyectos} toggleModal={toggleModal} />
             <Sobremi/>
