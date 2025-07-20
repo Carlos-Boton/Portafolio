@@ -41,7 +41,7 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
                         className="mx-auto h-20 w-auto"
                     />
                     <h2 className="mt-2 text-center text-2xl/9 font-bold tracking-tight">
-                        Enviame un correo para saber mas sobre mi
+                        Enviame un correo Aqui
                     </h2>
                 </div>
 
@@ -105,7 +105,7 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
                 </div>
 
                 <div className=" w-full">
-                    <div className="flex items-center justify-center w-full space-x-6">
+                    <div className="flex items-center justify-center w-full space-x-4">
                         <div className="group relative w-16 h-16 z-10">
                             <div className="absolute bg-slate-600 h-full w-full rounded-full z-20 p-2">
                                 <Icono1 className="w-12 h-12" />
@@ -156,34 +156,15 @@ const Contacto = ({ iconsContacto,iconosImagenes,logoSeleccionado }) => {
                                 <div className="relative h-full w-full">
                                     <div className="absolute transition-all border-2 left-0 group-hover:-left-[20px] h-full w-full bg-slate-800 rounded-full group-hover:w-[100px] p-3 group-hover:delay-300 delay-0 overflow-hidden">
                                         <h3 className="opacity-0 scale-95 transition-all duration-300 text-xl text-center
-                                        group-hover:opacity-100 group-hover:scale-100 group-hover:delay-[350ms] delay-0 whitespace-nowrap">Github</h3>
+                                        group-hover:opacity-100 group-hover:scale-100 group-hover:delay-[350ms] delay-0 whitespace-nowrap">
+                                            <a href="https://github.com/Carlos-Boton?tab=repositories">Github</a>
+                                        </h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                {/* <div className="space-y-10 block sm:hidden w-full">
-                    <div className="space-y-6 flex flex-col items-center justify-center w-full">
-                        <div className="hover:bg-slate-700 p-2 rounded-full flex items-center overflow-hidden border h-14 w-48">
-                            <Icono1 className="w-10 h-10 mr-2" />
-                            <h3 className="text-xl">9811771571</h3>
-                        </div>
-                        <div className="hover:bg-slate-700 p-2 rounded-full flex items-center overflow-hidden border h-14 w-[270px]">
-                            <Icono2 className="w-10 h-10 mr-2" />
-                            <h3 className="text-xl">Campeche, campeche</h3>
-                        </div>
-                        <div className="hover:bg-slate-700 p-2 rounded-full flex items-center overflow-hidden border h-14 w-64">
-                            <Icono3 className="w-10 h-10 mr-2" />
-                            <h3 className="text-xl">carldfco@gmail.com</h3>
-                        </div>
-                        <div className="hover:bg-slate-700 p-2 rounded-full flex items-center overflow-hidden border h-14 w-36">
-                            <Icono4 className="w-10 h-10 mr-2" />
-                            <h3 className="text-xl">Github</h3>
-                        </div>
-                    </div>
-                </div> */}
             </section>
         </div>
     )

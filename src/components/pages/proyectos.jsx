@@ -1,11 +1,37 @@
-const Proyectos = () => {
+import { useEffect, useState } from "react";
+
+const Proyectos = ({proyectos,toggleModal}) => {
+
+    const [visible, setVisible] = useState(proyectos.map(() => true));
+    const [indices, setIndices] = useState(proyectos.map(() => 0));
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            // Primero, hacemos invisible
+            setVisible(prev => prev.map(() => false));
+
+            setTimeout(() => {
+                // Luego de 300ms cambiamos la imagen
+                setIndices(prevIndices =>
+                    prevIndices.map((index, i) =>
+                        (index + 1) % proyectos[i].imagen.length
+                    )
+                );
+                // Y la volvemos visible
+                setVisible(prev => prev.map(() => true));
+            }, 300); // Debe coincidir con la duración de la transición
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, [proyectos]);
+    
     return (
         <div className="h-screen">
 
             <section id="proyectos" className="relative h-full isolate">
                 <div
                     aria-hidden="true"
-                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                 >
                     <div
                         style={{
@@ -15,31 +41,40 @@ const Proyectos = () => {
                         className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
                     />
                 </div>
+                
                 <div className="h-full flex flex-col items-center justify-center">
                     <h3 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl max-w-xl mb-10">Proyectos</h3>
-                    <div className="h-[540px] sm:h-[600px] py-6 sm:px-12 w-full overflow-x-auto">
-                        <div className="flex items-center justify-center h-full min-w-max">
+                    <div  className="h-[540px] sm:h-[600px] py-6 sm:px-12 w-full overflow-x-auto">
+                        <div  className="flex items-center justify-center h-full min-w-max">
 
-                            <div className="w-80 h-full rounded-2xl mx-6 bg-slate-700 shadow-lg overflow-hidden text-white">
-                                <div className="h-[300px] sm:h-[360px] bg-gray-200">
-                                    <img
-                                        src="https://via.placeholder.com/320x160"
-                                        alt="IMG"
-                                        className="w-full h-full object-cover"
-                                    />
-                                </div>
-                                <div className="p-4 flex flex-col justify-between h-[calc(100%-304px)] sm:h-[calc(100%-360px)]">
-                                    <div>
-                                        <h2 className="text-xl font-bold mb-2 text-white">Prueba de tarjeta</h2>
-                                        <p className="text-sm text-white">
-                                            hola como estamos a todos, este es una prueba de texto larga para diferenciarlo entre tamaño de dispositivos, bla bla bla
-                                        </p>
+                            {proyectos.map((proy, i) => (
+                                <div key={i} className="w-80 h-full rounded-2xl mx-6 bg-slate-700 shadow-lg text-white">
+                                    <div className="h-[300px] sm:h-[350px] bg-slate-900 rounded-t-2xl">
+                                        <img
+                                            src={proy.imagen[indices[i]]}
+                                            alt="IMG"
+                                            className={`w-full h-full rounded-t-2xl object-cover transition-opacity duration-500 ${visible[i] ? 'opacity-100' : 'opacity-0'}`}
+                                        />
                                     </div>
-                                    <button className="mt-4 bg-slate-500 text-white text-sm px-4 py-2 rounded hover:bg-slate-600 transition-all">
-                                        Github
-                                    </button>
+                                    <div className="p-4 flex flex-col justify-between h-[calc(100%-304px)] sm:h-[calc(100%-360px)]">
+                                        <div className="">
+                                            <h2 className="text-xl font-bold mb-2 text-white">{proy.nombre}</h2>
+                                            <div className="flex flex-wrap gap-2 min-w-full p-1">
+                                                {proy.iconos.map((icono, i) => (
+                                                    <div key={i}>
+                                                    <img src={icono} alt="" className="w-8" />
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <button
+                                        onClick={() => toggleModal(i)}
+                                        className="mt-2 bg-slate-500 text-white text-sm px-4 py-2 rounded hover:bg-slate-600 transition-all">
+                                            Mas Información
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

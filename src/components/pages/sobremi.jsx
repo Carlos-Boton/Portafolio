@@ -4,7 +4,7 @@ const Sobremi = () => {
             <section id="sobremi" className="relative h-full isolate">
                 <div
                     aria-hidden="true"
-                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
                 >
                     <div
                         style={{
