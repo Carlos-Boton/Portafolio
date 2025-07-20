@@ -95,7 +95,7 @@ const Cuerpo = () => {
     }, []);
 
     return(
-        <div id="main" className="min-h-screen transition-colors duration-700 bg-slate-800">
+        <div id="main" className="h-screen overflow-y-auto transition-colors duration-700 bg-slate-800">
             <Navbar navegante={navegante} setNavegante={setNavegante}/>
             <ModalProyectos mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} proyectos={proyectos} valorModal={valorModal} XMarkIcon={XMarkIcon} />
             <Inicio iconosImagenes={iconosImagenes} setLogoSeleccionado={setLogoSeleccionado} logoSeleccionado={logoSeleccionado} />
