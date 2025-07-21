@@ -23,7 +23,7 @@ const Navbar = ({navegante,setNavegante}) => {
                     onClick={() => setNavegante("contacto")}
                     className={`hover:text-slate-300 transition-all px-4 mb-2 text-sm/6 font-semibold ${navegante === "contacto" && ("text-slate-400 font-bold")} `}
                     >Contacto</a>
-                    <div className={`absolute border border-slate-500 bottom-0 transition-all duration-500
+                    <div className={`absolute border border-slate-500 bottom-0 transition-all duration-300
                     ${navegante === "inicio" ? ("w-[66px] left-[0px]") :
                     navegante === "proyectos" ? ("left-[66px] w-[95px]") :
                     navegante === "sobremi" ? ("left-[160px] w-[89px]") :

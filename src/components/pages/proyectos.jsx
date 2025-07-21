@@ -44,8 +44,8 @@ const Proyectos = ({proyectos,toggleModal}) => {
                 
                 <div className="h-full flex flex-col items-center justify-start py-8">
                     <h3 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl max-w-xl mb-10 mt-16">Proyectos</h3>
-                    <div  className="h-[540px] sm:h-[600px] py-6  w-full overflow-x-auto">
-                        <div  className="flex items-center justify-center px-12 h-full min-w-max">
+                    <div  className="h-[540px] sm:h-[600px] py-6 w-full overflow-x-auto">
+                        <div  className="flex items-center justify-center px-6 h-full min-w-max">
 
                             {proyectos.map((proy, i) => (
                                 <div key={i} className="w-80 h-full border-4 border-slate-600 rounded-2xl mx-6 bg-slate-700 shadow-lg text-white">

@@ -11,11 +11,16 @@ import Proyectos from "../pages/proyectos";
 import Sobremi from "../pages/sobremi";
 import Navbar from "./navbar";
 import Css from "../img/icons/css.svg";
+import Express from "../img/icons/express.svg";
 import Firebase from "../img/icons/firebase.svg";
+import Git from "../img/icons/git.svg";
+import GitHub from "../img/icons/github.svg";
 import Html from "../img/icons/html5.svg";
 import JavaScript from "../img/icons/javascript.svg";
 import Laravel from "../img/icons/laravel.svg";
+import Mongo from "../img/icons/mongodb.svg";
 import Mysql from "../img/icons/mysql.svg";
+import Node from "../img/icons/nodedotjs.svg";
 import Php from "../img/icons/php.svg";
 import React from "../img/icons/react.svg";
 import ReactRouter from "../img/icons/reactrouter.svg";
@@ -52,7 +57,7 @@ const Cuerpo = () => {
     const [logoSeleccionado, setLogoSeleccionado] = useState(0);
     const iconsContacto = [PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon];
     const iconosImagenes = [ImgAzul,ImgAnaranjado,ImgMorado,ImgRojo,ImgVerde];
-    const IconsTecnologias = [React,Vite,ReactRouter,Tailwind,Firebase,JavaScript,Css,Html,Php,Mysql,Laravel];
+    const IconsTecnologias = [React,Vite,ReactRouter,Tailwind,Firebase,JavaScript,Css,Html,Php,Mysql,Laravel,Node,Mongo,Express,Git,GitHub];
     const proyectos = [
         // {nombre:"", iconos: [], imagen: [],},
         {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2,Whats3,Whats4,Whats5,Whats6,Whats7,Whats8], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"",lik:""},
@@ -130,7 +135,7 @@ const Cuerpo = () => {
 
 
     return(
-        <div id="main" className="h-screen overflow-y-auto transition-colors duration-700 bg-slate-800">
+        <div id="main" className="h-screen overflow-y-auto overflow-x-hidden transition-colors duration-700 bg-slate-800">
             <Navbar navegante={navegante} setNavegante={setNavegante}/>
             <ModalProyectos mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} proyectos={proyectos} valorModal={valorModal} XMarkIcon={XMarkIcon} ChevronLeftIcon={ChevronLeftIcon} ChevronRightIcon={ChevronRightIcon} toggleImagenModal={toggleImagenModal} valorImagenModal={valorImagenModal} />
             <Inicio iconosImagenes={iconosImagenes} setLogoSeleccionado={setLogoSeleccionado} logoSeleccionado={logoSeleccionado} />
