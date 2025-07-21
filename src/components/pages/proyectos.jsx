@@ -47,7 +47,7 @@ const Proyectos = ({proyectos,toggleModal}) => {
                     <div  className="h-[540px] sm:h-[600px] py-6 w-full overflow-x-auto snap-x">
                         <div  className="flex items-center justify-center px-6 h-full min-w-max">
                             {proyectos.map((proy, i) => (
-                                <div key={i} className="w-80 h-full border-4 border-slate-600 rounded-2xl mx-6 bg-slate-700 shadow-lg text-white snap-center">
+                                <div key={i} className="w-80 max-h-full border-4 border-slate-600 rounded-2xl mx-6 bg-slate-700 shadow-lg text-white snap-center">
                                     <div className="h-[290px] sm:h-[280px] bg-slate-900 rounded-t-2xl">
                                         <img
                                             src={proy.imagen[indices[i]]}

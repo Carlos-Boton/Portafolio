@@ -1,6 +1,6 @@
 const ModalProyectos = ({mostrarModal,setMostrarModal,proyectos,valorModal,XMarkIcon,ChevronLeftIcon,ChevronRightIcon,toggleImagenModal,valorImagenModal}) => {
     return(
-        <div className={`fixed h-screen bg-slate-900 overflow-hidden right-0 z-50 transition-all duration-200 ${mostrarModal ? 'group w-full md:w-[800px]' : 'w-0'}`}>
+        <div className={`fixed h-screen bg-slate-900 overflow-hidden right-0 z-50 transition-all duration-200 ${mostrarModal ? 'group w-full md:w-[700px]' : 'w-0'}`}>
             <div className="w-full h-12">
                 <div
                 onClick={() => setMostrarModal(false)}
