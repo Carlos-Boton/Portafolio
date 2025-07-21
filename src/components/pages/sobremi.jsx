@@ -4,7 +4,7 @@ const Sobremi = ({IconsTecnologias}) => {
     const [Icono1,Icono2,Icono3,Icono4,Icono5,Icono6,Icono7,Icono8,Icono9,Icono10,Icono11,Icono12,Icono13,Icono14,Icono15,Icono16] = IconsTecnologias;
 
     return(
-        <div className="h-screen relative" >
+        <div className="min-h-screen relative" >
             <section id="sobremi" className="relative h-full isolate">
                 <div
                     aria-hidden="true"

@@ -26,7 +26,7 @@ const Proyectos = ({proyectos,toggleModal}) => {
     }, [proyectos]);
     
     return (
-        <div className="h-screen">
+        <div className="min-h-screen">
 
             <section id="proyectos" className="relative h-full isolate">
                 <div
