@@ -59,8 +59,6 @@ const Sobremi = ({IconsTecnologias}) => {
                                 <h3 className="text-center font-bold mb-2">Herramientas / Entorno de desarrollo</h3>
                                 <div className="flex space-x-4 justify-center">
                                     <div className="flex flex-col items-center"><img src={Icono2} alt="" className="w-8 h-8" /></div>
-                                    <div className="flex flex-col items-center"><img src={Icono5} alt="" className="w-8 h-8" /></div>
-                                    <div className="flex flex-col items-center"><img src={Icono11} alt="" className="w-8 h-8" /></div>
                                     <div className="flex flex-col items-center"><img src={Icono12} alt="" className="w-8 h-8" /></div>
                                     <div className="flex flex-col items-center"><img src={Icono15} alt="" className="w-8 h-8" /></div>
                                     <div className="flex flex-col items-center"><img src={Icono16} alt="" className="w-8 h-8" /></div>
