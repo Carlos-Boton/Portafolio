@@ -42,21 +42,21 @@ const Proyectos = ({proyectos,toggleModal}) => {
                     />
                 </div>
                 
-                <div className="h-full flex flex-col items-center justify-center">
-                    <h3 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl max-w-xl mb-10">Proyectos</h3>
+                <div className="h-full flex flex-col items-center justify-start py-8">
+                    <h3 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl max-w-xl mb-10 mt-16">Proyectos</h3>
                     <div  className="h-[540px] sm:h-[600px] py-6  w-full overflow-x-auto">
                         <div  className="flex items-center justify-center px-12 h-full min-w-max">
 
                             {proyectos.map((proy, i) => (
-                                <div key={i} className="w-80 h-full rounded-2xl mx-6 bg-slate-700 shadow-lg text-white">
-                                    <div className="h-[300px] sm:h-[350px] bg-slate-900 rounded-t-2xl">
+                                <div key={i} className="w-80 h-full border-4 border-slate-600 rounded-2xl mx-6 bg-slate-700 shadow-lg text-white">
+                                    <div className="h-[290px] sm:h-[280px] bg-slate-900 rounded-t-2xl">
                                         <img
                                             src={proy.imagen[indices[i]]}
                                             alt="IMG"
-                                            className={`w-full h-full rounded-t-2xl object-cover transition-opacity duration-500 ${visible[i] ? 'opacity-100' : 'opacity-0'}`}
+                                            className={`w-full h-full rounded-t-xl object-cover transition-opacity duration-500 ${visible[i] ? 'opacity-100' : 'opacity-0'}`}
                                         />
                                     </div>
-                                    <div className="p-4 flex flex-col justify-between h-[calc(100%-304px)] sm:h-[calc(100%-360px)]">
+                                    <div className="p-4 flex flex-col justify-between h-[calc(100%-294px)] sm:h-[calc(100%-290px)]">
                                         <div className="">
                                             <h2 className="text-xl font-bold mb-2 text-white">{proy.nombre}</h2>
                                             <div className="flex flex-wrap gap-2 min-w-full p-1">

@@ -1,6 +1,9 @@
-const Sobremi = () => {
+const Sobremi = ({IconsTecnologias}) => {
+
+    const [Icono1,Icono2,Icono3,Icono4,Icono5,Icono6,Icono7,Icono8,Icono9,Icono10,Icono11,Icono12,Icono13,Icono14,Icono15] = IconsTecnologias;
+
     return(
-        <div className="h-screen relative" >
+        <div className="h-screen relative py-6" >
             <section id="sobremi" className="relative h-full isolate">
                 <div
                     aria-hidden="true"
@@ -14,8 +17,48 @@ const Sobremi = () => {
                         className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
                     />
                 </div>
-                <div className="flex items-center justify-center h-full">
-                    <h3 className="text-white text-7xl font-bold">Hola</h3>
+                <div className="flex flex-col items-center justify-start h-full text-white">
+                    <h3 className="text-7xl font-bold mb-6 mt-14">Sobre mi</h3>
+                    <div className="w-full sm:w-[620px] text-justify text-sm sm:text-base mb-4 px-6 sm:px-0">
+                        <p>Soy un desarrollador full stack apasionado por la creación de aplicaciones web. Me encanta enfrentar retos que, al principio, confunden mi mente y me hacen sentir que no sé nada… hasta que logro comprender el problema y encontrar una solución.</p>
+                        <p>Más que buscar nuevas tecnologías, me enfoco en descubrir soluciones que realmente optimicen el funcionamiento de una aplicación. Sigo en constante aprendizaje y crecimiento, perfeccionando cada vez más mi lógica, mis diseños y la forma en que conecto cada parte de un sistema, tanto en el frontend como en el backend.</p>
+                    </div>
+                    <div className="flex flex-col space-y-2">
+                        <div>
+                            <h3 className="text-center mb-2">Lenguajes</h3>
+                            <div className="flex space-x-3 justify-center">
+                                <div className="flex flex-col items-center"><img src={Icono7} alt="" className="w-8 h-8" /><h3 className="text-xs">Intermedio</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono8} alt="" className="w-8 h-8" /><h3 className="text-xs">Intermedio/avanzado</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono6} alt="" className="w-8 h-8" /><h3 className="text-xs">Intermedio</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono9} alt="" className="w-8 h-8" /><h3 className="text-xs">Intermedio</h3></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className="text-center mb-2">Framework / Librerias</h3>
+                            <div className="flex space-x-3 justify-center">
+                                <div className="flex flex-col items-center"><img src={Icono1} alt="" className="w-8 h-8" /><h3 className="text-xs">Basico/Intermedio</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono3} alt="" className="w-8 h-8" /><h3 className="text-xs">Basico/Intermedio</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono4} alt="" className="w-8 h-8" /><h3 className="text-xs">Intermedio</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono11} alt="" className="w-8 h-8" /><h3 className="text-xs">Basico/Intermedio</h3></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className="text-center mb-2">Base de datos</h3>
+                            <div className="flex space-x-3 justify-center">
+                                <div className="flex flex-col items-center"><img src={Icono10} alt="" className="w-8 h-8" /><h3 className="text-xs">Basico/Intermedio</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono5} alt="" className="w-8 h-8" /><h3 className="text-xs">Intermedio</h3></div>
+                                <div className="flex flex-col items-center"><img src={Icono11} alt="" className="w-8 h-8" /><h3 className="text-xs">Basico/Intermedio</h3></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 className="text-center mb-2 justify-center">Herramientas / Entorno de desarrollo</h3>
+                            <div className="flex space-x-4 justify-center">
+                                <div className="flex flex-col items-center"><img src={Icono2} alt="" className="w-8 h-8" /></div>
+                                <div className="flex flex-col items-center"><img src={Icono5} alt="" className="w-8 h-8" /></div>
+                                <div className="flex flex-col items-center"><img src={Icono11} alt="" className="w-8 h-8" /></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

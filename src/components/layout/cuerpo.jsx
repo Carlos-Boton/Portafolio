@@ -52,6 +52,7 @@ const Cuerpo = () => {
     const [logoSeleccionado, setLogoSeleccionado] = useState(0);
     const iconsContacto = [PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon];
     const iconosImagenes = [ImgAzul,ImgAnaranjado,ImgMorado,ImgRojo,ImgVerde];
+    const IconsTecnologias = [React,Vite,ReactRouter,Tailwind,Firebase,JavaScript,Css,Html,Php,Mysql,Laravel];
     const proyectos = [
         // {nombre:"", iconos: [], imagen: [],},
         {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2,Whats3,Whats4,Whats5,Whats6,Whats7,Whats8], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"",lik:""},
@@ -134,7 +135,7 @@ const Cuerpo = () => {
             <ModalProyectos mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} proyectos={proyectos} valorModal={valorModal} XMarkIcon={XMarkIcon} ChevronLeftIcon={ChevronLeftIcon} ChevronRightIcon={ChevronRightIcon} toggleImagenModal={toggleImagenModal} valorImagenModal={valorImagenModal} />
             <Inicio iconosImagenes={iconosImagenes} setLogoSeleccionado={setLogoSeleccionado} logoSeleccionado={logoSeleccionado} />
             <Proyectos proyectos={proyectos} toggleModal={toggleModal} />
-            <Sobremi/>
+            <Sobremi IconsTecnologias={IconsTecnologias} />
             <Contacto iconsContacto={iconsContacto} iconosImagenes={iconosImagenes} logoSeleccionado={logoSeleccionado} />
         </div>
     )
