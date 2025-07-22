@@ -1,4 +1,4 @@
-import { PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon,XMarkIcon,ChevronLeftIcon,ChevronRightIcon } from "@heroicons/react/16/solid";
+import { PhoneIcon,MapPinIcon,EnvelopeIcon,CodeBracketSquareIcon,XMarkIcon,ChevronLeftIcon,ChevronRightIcon,GlobeAltIcon } from "@heroicons/react/16/solid";
 import { useState,useEffect } from "react";
 import ImgAzul from "../img/azul.webp";
 import ImgAnaranjado from "../img/anaranjado.webp";
@@ -60,9 +60,9 @@ const Cuerpo = () => {
     const IconsTecnologias = [React,Vite,ReactRouter,Tailwind,Firebase,JavaScript,Css,Html,Php,Mysql,Laravel,Node,Mongo,Express,Git,GitHub];
     const proyectos = [
         // {nombre:"", iconos: [], imagen: [],},
-        {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2,Whats3,Whats4,Whats5,Whats6,Whats7,Whats8], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"",lik:""},
-        {nombre: "Gestion de ventas", iconos: [Firebase,React,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Dist1,Dist2,Dist3,Dist4,Dist5,Dist6,Dist7,Dist8,Dist9,Dist10,Dist11],descripcion:"El objetivo es diseñar y desarrollar una aplicación web para gestionar la generación y organización de pedidos de manera eficiente, permitiendo agruparlos en viajes según la capacidad de entrega, registrar ventas locales independientes e impresion de ticket, con el fin de optimizar el trabajo diario de un distribuidor y mejorar la administración de sus operaciones.",github:"",lik:""},
-        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [],descripcion:"",github:"",lik:""}
+        {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2,Whats3,Whats4,Whats5,Whats6,Whats7,Whats8], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"https://github.com/Carlos-Boton/DisenoWhats",link:"https://portafolio-whats.vercel.app/proyectos"},
+        {nombre: "Gestion de ventas", iconos: [Firebase,React,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Dist1,Dist2,Dist3,Dist4,Dist5,Dist6,Dist7,Dist8,Dist9,Dist10,Dist11],descripcion:"El objetivo es diseñar y desarrollar una aplicación web para gestionar la generación y organización de pedidos de manera eficiente, permitiendo agruparlos en viajes según la capacidad de entrega, registrar ventas locales independientes e impresion de ticket, con el fin de optimizar el trabajo diario de un distribuidor y mejorar la administración de sus operaciones.",github:"https://github.com/Carlos-Boton/SistemaPruebaVenta",link:"https://sistema-prueba-venta.vercel.app/login"},
+        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [],descripcion:"",github:"",link:""}
     ]
     const valorProyecto = proyectos[valorModal].imagen.length - 1;
 
@@ -137,7 +137,7 @@ const Cuerpo = () => {
     return(
         <div id="main" className="h-screen overflow-y-auto overflow-x-hidden transition-colors duration-700 bg-slate-800">
             <Navbar navegante={navegante} setNavegante={setNavegante}/>
-            <ModalProyectos mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} proyectos={proyectos} valorModal={valorModal} XMarkIcon={XMarkIcon} ChevronLeftIcon={ChevronLeftIcon} ChevronRightIcon={ChevronRightIcon} toggleImagenModal={toggleImagenModal} valorImagenModal={valorImagenModal} />
+            <ModalProyectos mostrarModal={mostrarModal} setMostrarModal={setMostrarModal} proyectos={proyectos} valorModal={valorModal} XMarkIcon={XMarkIcon} ChevronLeftIcon={ChevronLeftIcon} ChevronRightIcon={ChevronRightIcon} toggleImagenModal={toggleImagenModal} valorImagenModal={valorImagenModal} GitHub={GitHub} GlobeAltIcon={GlobeAltIcon} />
             <Inicio iconosImagenes={iconosImagenes} setLogoSeleccionado={setLogoSeleccionado} logoSeleccionado={logoSeleccionado} />
             <Proyectos proyectos={proyectos} toggleModal={toggleModal} />
             <Sobremi IconsTecnologias={IconsTecnologias} />

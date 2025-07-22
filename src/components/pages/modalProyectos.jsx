@@ -1,4 +1,4 @@
-const ModalProyectos = ({mostrarModal,setMostrarModal,proyectos,valorModal,XMarkIcon,ChevronLeftIcon,ChevronRightIcon,toggleImagenModal,valorImagenModal}) => {
+const ModalProyectos = ({mostrarModal,setMostrarModal,proyectos,valorModal,XMarkIcon,ChevronLeftIcon,ChevronRightIcon,toggleImagenModal,valorImagenModal,GitHub,GlobeAltIcon}) => {
     return(
         <div className={`fixed h-screen bg-slate-900 overflow-hidden right-0 z-50 transition-all duration-200 ${mostrarModal ? 'group w-full md:w-[700px]' : 'w-0'}`}>
             <div className="w-full h-12">
@@ -32,14 +32,16 @@ const ModalProyectos = ({mostrarModal,setMostrarModal,proyectos,valorModal,XMark
                     </div>
                     <p className="text-white">{proyectos[valorModal].descripcion} </p>
                 </div>
-                <div className="h-[8rem] flex flex-col justify-center px-[4rem]">
-                    <a href="http://"
-                    className="mt-2 bg-slate-600 text-white text-sm px-4 py-2 rounded hover:bg-slate-700 transition-all text-center">
-                        Documentacion Github
+                <div className="h-[8rem] flex justify-center items-start px-[4rem] space-x-8">
+                    <a href={proyectos[valorModal].github}
+                    target="_blank" rel="noopener noreferrer"
+                    className="mt-2 bg-slate-600 text-white text-sm p-2 rounded hover:bg-slate-700 transition-all text-center">
+                        <img src={GitHub} alt="" className="w-10 h-10" />
                     </a>
-                    <a href="http://"
-                    className="mt-2 bg-slate-600 text-white text-sm px-4 py-2 rounded hover:bg-slate-700 transition-all text-center">
-                        Link del proyecto
+                    <a href={proyectos[valorModal].link}
+                    target="_blank" rel="noopener noreferrer"
+                    className="mt-2 bg-slate-600 text-white text-sm p-2 rounded hover:bg-slate-700 transition-all text-center">
+                        <GlobeAltIcon className="w-10 h-10" />
                     </a>
                 </div>
             </div>
