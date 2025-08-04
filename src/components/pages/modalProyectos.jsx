@@ -38,11 +38,15 @@ const ModalProyectos = ({mostrarModal,setMostrarModal,proyectos,valorModal,XMark
                     className="mt-2 bg-slate-600 text-white text-sm p-2 rounded hover:bg-slate-700 transition-all text-center">
                         <img src={GitHub} alt="" className="w-10 h-10" />
                     </a>
-                    <a href={proyectos[valorModal].link}
-                    target="_blank" rel="noopener noreferrer"
-                    className="mt-2 bg-slate-600 text-white text-sm p-2 rounded hover:bg-slate-700 transition-all text-center">
-                        <GlobeAltIcon className="w-10 h-10" />
-                    </a>
+                    {proyectos[valorModal].link && (
+                            <a href={proyectos[valorModal].link}
+                            target="_blank" rel="noopener noreferrer"
+                            className="mt-2 bg-slate-600 text-white text-sm p-2 rounded hover:bg-slate-700 transition-all text-center">
+                                <GlobeAltIcon className="w-10 h-10" />
+                            </a>
+
+                    )
+                    }
                 </div>
             </div>
         </div>

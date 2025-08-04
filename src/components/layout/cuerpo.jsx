@@ -45,6 +45,13 @@ import Dist8 from "../img/distribuidor/ticketPedido.webp";
 import Dist9 from "../img/distribuidor/ventasSemana.webp";
 import Dist10 from "../img/distribuidor/viajePedidoResumen.webp";
 import Dist11 from "../img/distribuidor/viajePedidos.webp";
+import Sis1 from "../img/sistemaTecn/ciclos.webp";
+import Sis2 from "../img/sistemaTecn/constancia.webp";
+import Sis3 from "../img/sistemaTecn/crear.webp";
+import Sis4 from "../img/sistemaTecn/inicioSesion.webp";
+import Sis5 from "../img/sistemaTecn/nav.webp";
+import Sis6 from "../img/sistemaTecn/registro.webp";
+import Sis7 from "../img/sistemaTecn/validar.webp";
 
 import ModalProyectos from "../pages/modalProyectos";
 
@@ -62,7 +69,7 @@ const Cuerpo = () => {
         // {nombre:"", iconos: [], imagen: [],},
         {nombre: "Diseño WhatsApp", iconos: [React,Vite,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Whats1,Whats2,Whats3,Whats4,Whats5,Whats6,Whats7,Whats8], descripcion:"El objetivo de este proyecto es desarrollar un clon de WhatsApp con el propósito de practicar y mejorar mis habilidades en FrontEnd, esta complementa conceptos clave del desarrollo web de lado del Frontend, tales como interfaces dinámicas, visualizacion de estados, diseño adaptable, simulando el entorno de una aplicación de mensajería moderna como es WhatsApp.",github:"https://github.com/Carlos-Boton/DisenoWhats",link:"https://portafolio-whats.vercel.app/proyectos"},
         {nombre: "Gestion de ventas", iconos: [Firebase,React,ReactRouter,Tailwind,JavaScript,Css,Html], imagen: [Dist1,Dist2,Dist3,Dist4,Dist5,Dist6,Dist7,Dist8,Dist9,Dist10,Dist11],descripcion:"El objetivo es diseñar y desarrollar una aplicación web para gestionar la generación y organización de pedidos de manera eficiente, permitiendo agruparlos en viajes según la capacidad de entrega, registrar ventas locales independientes e impresion de ticket, con el fin de optimizar el trabajo diario de un distribuidor y mejorar la administración de sus operaciones.",github:"https://github.com/Carlos-Boton/SistemaPruebaVenta",link:"https://sistema-prueba-venta.vercel.app/login"},
-        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [],descripcion:"",github:"",link:""}
+        {nombre: "Sistema Tecn", iconos: [JavaScript,Css,Html,Php,Mysql,Laravel], imagen: [Sis1,Sis2,Sis3,Sis4,Sis5,Sis6,Sis7],descripcion:"El objetivo de este proyecto es crear un sistema para tener un control de puntos a los alumnos que pasan por el proceso de sus actividades extraescolares, eficiencia de registros de los alumnos a sus actividades, asignacion de maestros a actividades, calificacion de puntos, e imprecion de certificado",github:"https://github.com/Carlos-Boton/Tecnm",link:""}
     ]
     const valorProyecto = proyectos[valorModal].imagen.length - 1;
 
